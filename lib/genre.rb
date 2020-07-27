@@ -10,6 +10,10 @@ class Genre
     @songs = []
   end
 
+  def artists
+    @songs.collect{|song| song.artist}.uniq
+  end
+
   def save
     @@all << self
   end
