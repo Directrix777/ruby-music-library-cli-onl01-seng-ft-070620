@@ -84,6 +84,7 @@ class MusicLibraryController
       song = Song.find_by_name(title)
       puts "#{counter}. #{song.artist.name} - #{title} - #{song.genre.name}"
       counter += 1
+    }
   end
 
   def play_song
