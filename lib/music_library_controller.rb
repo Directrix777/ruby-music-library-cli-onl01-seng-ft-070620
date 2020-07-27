@@ -92,7 +92,7 @@ class MusicLibraryController
     num = gets
     sorted_names = []
     sorted_songs = []
-    Song.all.each{|song| sorted_names << song.name if song.artist.name == artist}
+    Song.all.each{|song| sorted_names << song.name}
     sorted_songs.sort.each{|name|
       sorted_songs = Song.find_by_name(name)
     }
