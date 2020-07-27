@@ -34,10 +34,12 @@ class MusicLibraryController
   end
 
   def list_songs
+    counter = 1
     sorted_titles = Song.all.collect{|song| song.name}
     sorted_titles.sort.each{|title|
       song = Song.find_by_name(title)
-      puts "#{song.artist} - #{title} - #{song.genre}"
+      puts "#{counter}. #{song.artist} - #{title} - #{song.genre}"
+      counter += 1
     }
   end
 
