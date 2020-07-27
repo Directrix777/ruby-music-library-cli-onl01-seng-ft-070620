@@ -9,6 +9,7 @@ class Song
     @name = name
     if artist
       @artist = artist
+    end
   end
 
   def save
