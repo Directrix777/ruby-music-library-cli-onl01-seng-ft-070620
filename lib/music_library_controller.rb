@@ -90,6 +90,10 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     num = gets.to_i
+    while num < 1 || num > Song.all.length
+      puts "Which song number would you like to play?"
+      num = gets.to_i
+    end
     sorted_names = []
     sorted_songs = []
     Song.all.each{|song| sorted_names << song.name}
