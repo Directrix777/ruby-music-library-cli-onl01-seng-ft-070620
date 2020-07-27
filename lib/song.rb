@@ -21,4 +21,8 @@ class Song
     @@all = []
   end
 
+  def self.create(name)
+    Song.new(name).save
+  end
+
 end
