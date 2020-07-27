@@ -34,6 +34,8 @@ class MusicLibraryController
   end
 
   def list_songs
+    sorted_titles = Song.all.each{|song| song.name}
+    sorted_titles.each{title}
   end
 
   def list_artists
