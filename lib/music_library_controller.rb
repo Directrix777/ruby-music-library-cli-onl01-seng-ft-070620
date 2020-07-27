@@ -96,7 +96,7 @@ class MusicLibraryController
     sorted_songs.sort.each{|name|
       sorted_songs = Song.find_by_name(name)
     }
-    
+
     puts "Playing #{sorted_songs[num - 1].title}, by #{sorted_songs[num - 1].artist}" 
   end
 
