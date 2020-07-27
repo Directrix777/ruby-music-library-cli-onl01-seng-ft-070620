@@ -35,6 +35,10 @@ class Song
     new_song = Song.new(split_data[1], Artist.find_or_create_by_name(split_data[0]), Genre.find_or_create_by_name(split_data[2]))
   end
 
+  def self.create_from_filename(filename)
+    self.new_from_filename(filename).save
+  end
+
   def self.all
     @@all
   end
