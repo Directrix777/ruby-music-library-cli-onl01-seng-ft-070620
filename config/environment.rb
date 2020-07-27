@@ -5,7 +5,7 @@ module Concerns
 
   module Findable
 
-    def self.find_by_name(name)
+    def find_by_name(name)
       self.all.each{|thing| return thing if thing.name == name}
       return nil
     end
