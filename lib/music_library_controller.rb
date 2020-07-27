@@ -89,7 +89,7 @@ class MusicLibraryController
 
   def play_song
     puts "Which song number would you like to play?"
-    num = gets
+    num = gets.to_int
     sorted_names = []
     sorted_songs = []
     Song.all.each{|song| sorted_names << song.name}
