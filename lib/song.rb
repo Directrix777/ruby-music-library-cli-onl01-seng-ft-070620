@@ -3,7 +3,6 @@
 class Song
 
   attr_accessor :name, :artist
-  @artist = nil
   @@all = []
 
   def initialize(name, artist = nil)
