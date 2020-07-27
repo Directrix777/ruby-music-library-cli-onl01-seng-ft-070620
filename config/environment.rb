@@ -10,7 +10,7 @@ module Concerns
       return nil
     end
 
-    def self.find_or_create_by_name
+    def find_or_create_by_name
       return self.find_by_name unless self.find_by_name
       return self.create(name)
     end
