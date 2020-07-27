@@ -28,8 +28,27 @@ class MusicLibraryController
       self.list_artists if input == "list artists"
       self.list_genres if input == "list genres"
       self.list_songs_by_artist if input == "list artist"
-      self.list_songs_by_genre if input == "play song"
+      self.list_songs_by_genre if input == "list genre"
+      self.play_song if input == "play song"
     end
+  end
+
+  def list_songs
+  end
+
+  def list_artists
+  end
+
+  def list_genres
+  end
+
+  def list_songs_by_artist
+  end
+
+  def list_songs_by_genre
+  end
+
+  def play_song
   end
 
 end
