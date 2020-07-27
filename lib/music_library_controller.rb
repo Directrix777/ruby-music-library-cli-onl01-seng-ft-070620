@@ -66,7 +66,7 @@ class MusicLibraryController
     artist = gets
     counter = 1
     sorted_songs = []
-    Song.all.each{|song| sorted_songs << song if song.artist == self}
+    Song.all.each{|song| sorted_songs << song if song.artist.name == artist}
     sorted_songs.sort.each{|name|
       song = Song.find_by_name(title)
       puts "#{counter}. #{song.artist.name} - #{title} - #{song.genre.name}"
@@ -77,6 +77,13 @@ class MusicLibraryController
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     genre = gets
+    counter = 1
+    sorted_songs = []
+    Song.all.each{|song| sorted_songs << song if song.genre.name == genre}
+    sorted_songs.sort.each{|name|
+      song = Song.find_by_name(title)
+      puts "#{counter}. #{song.artist.name} - #{title} - #{song.genre.name}"
+      counter += 1
   end
 
   def play_song
