@@ -11,7 +11,7 @@ module Concerns
     end
 
     def find_or_create_by_name(name)
-      return self.find_by_name unless self.find_by_name
+      return self.find_by_name(name) unless self.find_by_name
       return self.create(name)
     end
 
