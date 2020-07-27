@@ -47,13 +47,18 @@ class MusicLibraryController
     counter = 1
     sorted_names = Artist.all.collect{|artist| artist.name}
     sorted_names.sort.each{|name|
-      artist = Artist.find_by_name(name)
       puts "#{counter}. #{name}"
       counter += 1
     }
   end
 
   def list_genres
+    counter = 1
+    sorted_names = Genre.all.collect{|genre| genre.name}
+    sorted_names.sort.each{|name|
+      puts "#{counter}. #{name}"
+      counter += 1
+    }
   end
 
   def list_songs_by_artist
