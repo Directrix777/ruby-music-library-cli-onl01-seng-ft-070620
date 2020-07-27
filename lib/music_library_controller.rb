@@ -89,7 +89,7 @@ class MusicLibraryController
 
   def play_song
     num = 0
-    until num < 1 || num > Song.all.length
+    while num < 1 || num > Song.all.length
       puts "Which song number would you like to play?"
       num = gets.to_i
     end
