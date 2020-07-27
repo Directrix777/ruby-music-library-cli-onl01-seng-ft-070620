@@ -10,6 +10,11 @@ class MusicLibraryController
   end
 
   def call
+    input = ''
+    puts "Welcome to your music library!"
+    while input != exit
+      gets(input)
+    end
   end
 
 end
