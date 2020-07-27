@@ -15,6 +15,10 @@ class Artist
     song.artist = self unless song.artist
   end
 
+  def genres
+    @songs.collect{|song| song.genre}.uniq
+  end
+
   def save
     @@all << self
   end
