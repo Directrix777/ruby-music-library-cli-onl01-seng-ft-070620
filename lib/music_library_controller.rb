@@ -90,7 +90,14 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     num = gets
-    puts
+    sorted_names = []
+    sorted_songs = []
+    Song.all.each{|song| sorted_names << song.name if song.artist.name == artist}
+    sorted_songs.sort.each{|name|
+      sorted_songs = Song.find_by_name(name)
+    }
+    
+    puts "Playing #{sorted_songs[num - 1].title}, by #{sorted_songs[num - 1].artist}" 
   end
 
 end
