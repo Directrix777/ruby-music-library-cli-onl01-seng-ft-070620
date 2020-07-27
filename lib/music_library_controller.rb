@@ -62,6 +62,8 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    artist = gets
   end
 
   def list_songs_by_genre
@@ -70,6 +72,7 @@ class MusicLibraryController
   end
 
   def play_song
+    self.list_songs
     puts "Which song number would you like to play?"
     num = gets
   end
