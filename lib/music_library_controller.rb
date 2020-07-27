@@ -88,7 +88,8 @@ class MusicLibraryController
   end
 
   def play_song
-    num = 1
+    puts "Which song number would you like to play?"
+    num = gets.to_i
     while num < 1 || num > Song.all.length
       puts "Which song number would you like to play?"
       num = gets.to_i
